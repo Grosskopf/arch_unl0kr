@@ -13,10 +13,12 @@ source=(
     git+https://gitlab.com/cherrypicker/unl0kr.git#commit=${_commit}
     unl0kr-hooks
     unl0kr-install
+    shift_logo.patch
 )
 backup=(etc/unl0kr.conf)
 build() {
     cd unl0kr
+    git am ../shift_logo.patch
     git submodule init
     git submodule update
     cd ..
@@ -30,4 +32,5 @@ package() {
 }
 md5sums=('SKIP'
          'bfb3b7489f6ad4eff1a934ee469dc101'
-         '79bb712c36c48179ab3eaab9d9d902db')
+         '79bb712c36c48179ab3eaab9d9d902db'
+         'd70e33266d0b44295e27b9e95a7cf45d')
