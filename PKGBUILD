@@ -1,7 +1,7 @@
 #Maintainer: Gerrit G. <gerrit at grosskopfgames dot de>
 pkgname=unl0kr
 pkgver=1.0
-pkgdesc="unl0kr On-screen Keyboard for FDE"
+pkgdesc="On-screen Keyboard for FDE"
 pkgrel=1
 arch=(x86_64)
 url="https://gitlab.com/cherrypicker/unl0kr"
