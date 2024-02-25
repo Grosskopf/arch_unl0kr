@@ -35,7 +35,7 @@ EOF
                 echo "A password is required to access the ${cryptname} volume"
                 #loop until we get a real password
                 while ! [ -b "/dev/mapper/${cryptname}" ]; do
-                    unl0kr | cryptsetup open "${cryptdev}" "${cryptname}"
+                    unl0kr 2> /dev/null | cryptsetup open "${cryptdev}" "${cryptname}"
                     export CRYPTTAB_TRIED=1
                 done
             fi
